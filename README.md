@@ -12,6 +12,8 @@ Sin embargo, Angular ahora permite trabajar exclusivamente con el archivo `.ts`,
 
 ## 2. Nueva forma del If, For y utilizacion del defer
 
+Esta es la nueva forma de usar el If, For y el Defer dentro de los `.component.html` o en su defecto si se esta usando el diseño de un solo archivo dentro del `template` 
+
 ### If
 la nueva estructura para la utilizacion del if es la siguiente 
 ``` bash

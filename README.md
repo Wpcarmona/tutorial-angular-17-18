@@ -97,5 +97,46 @@ src/
 se definieron el manejo correcto de rutas, para ello consulete el archivo app.routes.ts como tambien dentro de las rutas de products para tener un mejor orden, dentro del app.routes.ts encontrara lo siguiente 
 
 ``` bash 
+ {
+        path: 'auth',
+        canActivate: [publicGuard],
+        loadChildren: () => import('./auth/features/')
+    },
+    {
+        path: '',
+        canActivate: [privateGuard],
+        loadComponent: () => import('./shared'),
+        children: [
+            {
+                path: 'dashboard',
+                loadComponent: () => import('./dashboard/dashboard.component'),
+            },
+            {
+                path: 'products',
+                loadChildren: () => import('./products/feactures/product.routes'),
+            },
+            {
+                path: '**',
+                redirectTo: 'dashboard'
+            }
+
+        ]
+    }
+```
+y dentro de products/features encontraremos 
+
+``` bash
+export default [
+    {
+        path: '',
+        loadComponent: () => import('./product-list/product-list.component'),
+    },
+    {
+        path: 'product/:id',
+        loadComponent: () => import('./product-detail/product-detail.component'),
+    },
+] as Routes
 
 ```
+
+esta es una manera de no aumentar el router principal, se subdivide en rutas que estaran en los archivos de cada pagina, NOTA: usar esto si y solo si se tiene en cuenta que esa feature tendra mas de una pagina, en caso de ser solo 1, no es necesario

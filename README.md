@@ -17,27 +17,27 @@ la nueva estructura para la utilizacion del if es la siguiente
 ``` bash
 
 @if (/condicion/) {
-    
+    <app-component>
 }
 ```
 tambien es posible usar un else 
 
 ``` bash
 @if (/condicion/) {
-    
+    <app-component>
 }@else {
-    
+    <app-element>
 }
 ```
 de igual forma es posible usar un else if 
 
 ``` bash 
 @if (/condicion/) {
-    
-}@else if () {
-
+    <app-component>
+}@else if (/condicion/) {
+    <app-element>
 }@else {
-
+    <app-card>
 }
 
 ```

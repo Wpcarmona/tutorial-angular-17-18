@@ -60,7 +60,7 @@ donde "item" sera el valor a usar, "items" sera la lista de doned saldran los da
 2. games es la lista de los elementos
 3. game.id es el identificado unico (notese que es uno de los elementos de la lista)
 
-### For
+### Defer
 
 el defer es una forma de lazy-loading, permite que no se reenderice todo los elementos en la pagina, si no que la reenderizacion sea perezosa o dependiendo de la configuracion, a continuacion mostraremos los siguientes ejemplos 
 

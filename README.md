@@ -136,7 +136,7 @@ Cuando generes un nuevo componente con Angular CLI, puedes personalizar la salid
 ng generate component my-component --skip-tests
 ```
 
-## 4. Estructura del Proyecto
+## 4. Estructura recomendadas para Proyectos
 
 ```bash
 ## Estructura del Proyecto
@@ -198,7 +198,7 @@ src/
 
 ```
 
-## 5. Manejo de rutas
+## 5. Manejo recomendado de rutas
 
 se definieron el manejo correcto de rutas, para ello consulete el archivo app.routes.ts como tambien dentro de las rutas de products para tener un mejor orden, dentro del app.routes.ts encontrara lo siguiente 
 
